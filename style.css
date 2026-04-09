@@ -86,3 +86,18 @@ pre.prayer-text {
   position: relative;
   z-index: 1;
 }
+
+.separator {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  margin-top: 10px;
+}
+
+.separator span {
+  display: block;
+  width: 40px;
+  height: 1px;
+  background-color: #ccc;
+}
