@@ -1,4 +1,4 @@
-const CACHE_NAME = 'prayers-cache-v17';
+const CACHE_NAME = 'prayers-cache-v18';
 
 const FILES_TO_CACHE = [
   '/',
