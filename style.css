@@ -58,7 +58,7 @@ ul li a:hover {
 
 pre.prayer-text {
   white-space: pre-wrap;
-  font-family: 'Yatra One', serif;
+  font-family: 'Yatra One', serif !important;;
   font-size: 1.1rem;
   line-height: 2.2;
   color: #000000;
