@@ -8,11 +8,10 @@
 
 body {
   font-family: 'Yatra One', serif;
-  background-color: #ffffff;
   color: #000000;
   max-width: 680px;
-  margin: 40px auto;
-  padding: 0 24px;
+  margin: 0 auto;
+  padding: 0;
   text-align: center;
 }
 
@@ -44,18 +43,20 @@ ul li a:hover {
 }
 
 .back-link {
-  display: inline-block;
-  margin-bottom: 32px;
+  position: fixed;
+  top: 16px;
+  left: 16px;
   color: #000000;
   text-decoration: none;
   font-size: 0.95rem;
   border-bottom: 1px solid #000;
+  z-index: 100;
 }
 
 .prayer-title {
   font-size: clamp(1.2rem, 5vw, 2rem);
-  margin-bottom: 24px;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  color: #ffffff;
 }
 
 pre.prayer-text {
@@ -71,4 +72,10 @@ pre.prayer-text {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.prayer-body {
+  background-color: #ffffff;
+  padding: 40px 24px;
+  min-height: 100vh;
 }
