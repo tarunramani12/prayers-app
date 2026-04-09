@@ -29,3 +29,13 @@ fetch('prayers.json')
     headerEl.style.backgroundColor = prayer.color;
     textEl.textContent = prayer.text;
   });
+
+  window.addEventListener('scroll', () => {
+  const header = document.getElementById('prayer-header');
+  const scrollY = window.scrollY;
+  const headerHeight = header.offsetHeight;
+  const progress = Math.min(scrollY / headerHeight, 1);
+
+  header.style.opacity = 1 - progress;
+  header.style.transform = `translateY(-${progress * 40}px)`;
+});
