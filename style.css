@@ -67,7 +67,7 @@ pre.prayer-text {
 }
 
 .prayer-header {
-  height: 100vh;
+  height: calc(100vh + env(safe-area-inset-top));
   display: flex;
   align-items: center;
   justify-content: center;
@@ -76,8 +76,9 @@ pre.prayer-text {
   transition: opacity 0.1s ease, transform 0.1s ease;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  padding-top: env(safe-area-inset-top);
+  padding-top: max(env(safe-area-inset-top), 20px);
   box-sizing: border-box;
+  margin-top: calc(-1 * env(safe-area-inset-top));
 }
 
 .prayer-body {
