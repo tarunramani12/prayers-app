@@ -9,3 +9,7 @@ fetch('prayers.json')
       list.appendChild(li);
     });
   });
+
+  if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('service-worker.js');
+}
