@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Yatra+One&display=swap');
+
 * {
   margin: 0;
   padding: 0;
@@ -5,18 +7,18 @@
 }
 
 body {
-  font-family: serif;
-  background-color: #fdf6e3;
-  color: #333;
-  max-width: 700px;
+  font-family: 'Yatra One', serif;
+  background-color: #ffffff;
+  color: #000000;
+  max-width: 680px;
   margin: 40px auto;
-  padding: 0 20px;
+  padding: 0 24px;
 }
 
 h1 {
-  font-size: 2rem;
-  margin-bottom: 30px;
-  color: #5a3e28;
+  font-size: 1.6rem;
+  margin-bottom: 32px;
+  color: #000000;
 }
 
 ul {
@@ -24,37 +26,39 @@ ul {
 }
 
 ul li {
-  margin-bottom: 15px;
+  margin-bottom: 18px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 18px;
 }
 
 ul li a {
   text-decoration: none;
   font-size: 1.2rem;
-  color: #8b5e3c;
-  border-bottom: 1px solid #ccc;
-  padding-bottom: 5px;
-  display: block;
+  font-family: 'Yatra One', serif;
 }
 
 ul li a:hover {
-  color: #5a3e28;
+  opacity: 0.7;
 }
 
 .back-link {
   display: inline-block;
-  margin-bottom: 30px;
-  color: #8b5e3c;
+  margin-bottom: 32px;
+  color: #000000;
   text-decoration: none;
   font-size: 0.95rem;
+  border-bottom: 1px solid #000;
 }
 
-.prayer-text {
-  font-size: 1.3rem;
-  line-height: 2.2;
-  color: #333;
+.prayer-title {
+  font-size: 2rem;
+  margin-bottom: 24px;
 }
 
 pre.prayer-text {
   white-space: pre-wrap;
-  font-family: serif;
+  font-family: 'Yatra One', serif;
+  font-size: 1.1rem;
+  line-height: 2.2;
+  color: #000000;
 }
