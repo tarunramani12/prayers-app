@@ -28,6 +28,7 @@ fetch('prayers.json')
     titleEl.textContent = prayer.title;
     headerEl.style.backgroundColor = prayer.color;
     textEl.textContent = prayer.text;
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', prayer.color);
   });
 
   window.addEventListener('scroll', () => {

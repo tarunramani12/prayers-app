@@ -76,6 +76,8 @@ pre.prayer-text {
   transition: opacity 0.1s ease, transform 0.1s ease;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
+  padding-top: env(safe-area-inset-top);
+  box-sizing: border-box;
 }
 
 .prayer-body {
