@@ -40,7 +40,7 @@ ul li a {
   font-family: 'Yatra One', serif;
   font-size: clamp(1.1rem, 4vw, 1.5rem);
   color: #333333;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.15);
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
 }
 
 ul li a:hover {
@@ -51,40 +51,30 @@ ul li a:hover {
   position: fixed;
   top: 18px;
   left: 18px;
-  color: #000000;
+  color: #ffffff;
   text-decoration: none;
   font-size: 0.95rem;
   z-index: 100;
 }
 
-.prayer-header {
+/* Full colored prayer page */
+.prayer-page {
+  min-height: 100vh;
   width: 100vw;
   margin-left: calc(-50vw + 50%);
-  height: calc(100vh + env(safe-area-inset-top));
-  margin-top: calc(-1 * env(safe-area-inset-top));
-  padding-top: max(env(safe-area-inset-top), 20px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  z-index: 0;
-  transition: opacity 0.1s ease, transform 0.1s ease;
+  padding: max(env(safe-area-inset-top), 80px) 24px 60px 24px;
   box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .prayer-title {
   font-size: clamp(1.5rem, 6vw, 2.8rem);
   color: #ffffff;
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  text-shadow: 1px 1px 4px rgba(0,0,0,0.2);
   padding: 0 20px;
-}
-
-.prayer-body {
-  background-color: #ffffff;
-  padding: 40px 24px;
-  min-height: 100vh;
-  position: relative;
-  z-index: 1;
+  margin-bottom: 40px;
 }
 
 pre.prayer-text {
@@ -92,7 +82,9 @@ pre.prayer-text {
   font-family: 'Yatra One', serif;
   font-size: clamp(0.75rem, 2.5vw, 1.1rem);
   line-height: 2;
-  color: #000000;
+  color: #ffffff;
+  text-shadow: 1px 1px 3px rgba(0,0,0,0.15);
+  text-align: center;
 }
 
 .hamburger {
@@ -112,6 +104,7 @@ pre.prayer-text {
   height: 2px;
   background-color: #000000;
 }
+
 
 .side-menu {
   position: fixed;
