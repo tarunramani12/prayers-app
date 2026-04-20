@@ -10,6 +10,7 @@ fetch('prayers.json')
     const headerEl = document.getElementById('prayer-header');
 
     titleEl.textContent = prayer.title;
+    titleEl.style.color = '#ffffff';
     headerEl.style.backgroundColor = prayer.color;
     textEl.textContent = prayer.text;
     document.querySelector('meta[name="theme-color"]').setAttribute('content', prayer.color);

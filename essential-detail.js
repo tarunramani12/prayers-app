@@ -13,6 +13,7 @@ fetch('essentials.json')
     const backLink = document.getElementById('back-link');
 
     titleEl.textContent = item.title;
+    titleEl.style.color = '#ffffff';
     headerEl.style.backgroundColor = category.color;
     textEl.textContent = item.text;
     backLink.href = `essentials-items.html?id=${catId}`;

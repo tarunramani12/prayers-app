@@ -8,12 +8,16 @@
 
 body {
   font-family: 'Yatra One', serif;
-  color: #000000;
   background-color: #ffffff;
+  color: #000000;
   max-width: 680px;
   margin: 0 auto;
-  padding: 0;
   text-align: center;
+}
+
+/* Page list content */
+.page-content {
+  padding: 80px 24px 40px 24px;
 }
 
 h1 {
@@ -34,59 +38,51 @@ ul li {
 
 ul li a {
   text-decoration: none;
-  font-size: clamp(1.1rem, 4vw, 1.5rem);
   font-family: 'Yatra One', serif;
-  text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
+  font-size: clamp(1.1rem, 4vw, 1.5rem);
+  color: #333333;
+  text-shadow: 2px 2px 6px rgba(0,0,0,0.15);
 }
 
 ul li a:hover {
   opacity: 0.7;
 }
 
-.page-content {
-  padding: 80px 24px 40px 24px;
-}
-
+/* Back link */
 .back-link {
   position: fixed;
-  top: 16px;
-  left: 16px;
+  top: 18px;
+  left: 18px;
   color: #000000;
   text-decoration: none;
   font-size: 0.95rem;
   z-index: 100;
 }
 
-.prayer-title {
-  font-size: clamp(1.5rem, 6vw, 2.8rem);
-  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
-  color: #ffffff;
-  padding: 0 20px;
-}
-
-pre.prayer-text {
-  white-space: pre-wrap;
-  font-family: 'Yatra One', serif !important;
-  font-size: clamp(0.75rem, 2.5vw, 1.1rem);
-  line-height: 2;
-  color: #000000;
-}
-
+/* Prayer full screen header */
 .prayer-header {
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
   height: calc(100vh + env(safe-area-inset-top));
+  margin-top: calc(-1 * env(safe-area-inset-top));
+  padding-top: max(env(safe-area-inset-top), 20px);
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
   z-index: 0;
   transition: opacity 0.1s ease, transform 0.1s ease;
-  width: 100vw;
-  margin-left: calc(-50vw + 50%);
-  padding-top: max(env(safe-area-inset-top), 20px);
   box-sizing: border-box;
-  margin-top: calc(-1 * env(safe-area-inset-top));
 }
 
+.prayer-title {
+  font-size: clamp(1.5rem, 6vw, 2.8rem);
+  color: #ffffff;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+  padding: 0 20px;
+}
+
+/* Prayer text body */
 .prayer-body {
   background-color: #ffffff;
   padding: 40px 24px;
@@ -95,11 +91,20 @@ pre.prayer-text {
   z-index: 1;
 }
 
+pre.prayer-text {
+  white-space: pre-wrap;
+  font-family: 'Yatra One', serif;
+  font-size: clamp(0.75rem, 2.5vw, 1.1rem);
+  line-height: 2;
+  color: #000000;
+}
+
+/* Hamburger - top right */
 .hamburger {
   position: fixed;
   top: 18px;
-  left: 18px;
-  z-index: 200;
+  right: 18px;
+  z-index: 400;
   cursor: pointer;
   display: flex;
   flex-direction: column;
@@ -113,20 +118,21 @@ pre.prayer-text {
   background-color: #000000;
 }
 
+/* Side menu - slides in from right */
 .side-menu {
   position: fixed;
   top: 0;
-  left: -260px;
+  right: -260px;
   width: 260px;
   height: 100vh;
   background-color: #ffffff;
-  border-right: 1px solid #eee;
+  border-left: 1px solid #eee;
   z-index: 300;
   display: flex;
   flex-direction: column;
   padding: 80px 24px 24px 24px;
   gap: 24px;
-  transition: left 0.3s ease;
+  transition: right 0.3s ease;
 }
 
 .side-menu a {
@@ -153,7 +159,7 @@ pre.prayer-text {
 }
 
 .menu-open .side-menu {
-  left: 0;
+  right: 0;
 }
 
 .menu-open .overlay {
