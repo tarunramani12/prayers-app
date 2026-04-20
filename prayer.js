@@ -13,15 +13,10 @@ fetch(jsonFile)
     const item = items.find(i => i.id === id);
     const titleEl = document.getElementById('prayer-title');
     const textEl = document.getElementById('prayer-text');
-    const pageEl = document.getElementById('prayer-page');
 
     titleEl.textContent = item.title;
+    titleEl.style.color = item.color;
     textEl.textContent = item.text;
-    pageEl.style.backgroundColor = item.color;
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', item.color);
-
-    // Make hamburger white on colored page
-    document.querySelectorAll('.hamburger span').forEach(s => s.style.backgroundColor = '#ffffff');
   });
 
 function toggleMenu() {
