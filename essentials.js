@@ -1,10 +1,10 @@
 fetch('essentials.json')
   .then(response => response.json())
-  .then(categories => {
+  .then(essentials => {
     const list = document.getElementById('essentials-list');
-    categories.forEach(cat => {
+    essentials.forEach(item => {
       const li = document.createElement('li');
-      li.innerHTML = `<a href="essentials-items.html?id=${cat.id}">${cat.title}</a>`;
+      li.innerHTML = `<a href="prayer.html?source=essentials&id=${item.id}">${item.title}</a>`;
       list.appendChild(li);
     });
   });

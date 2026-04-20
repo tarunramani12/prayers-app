@@ -4,7 +4,7 @@ fetch('prayers.json')
     const list = document.getElementById('prayer-list');
     prayers.forEach(prayer => {
       const li = document.createElement('li');
-      li.innerHTML = `<a href="prayer.html?id=${prayer.id}">${prayer.title}</a>`;
+      li.innerHTML = `<a href="prayer.html?source=prayers&id=${prayer.id}">${prayer.title}</a>`;
       list.appendChild(li);
     });
   });

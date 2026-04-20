@@ -1,19 +1,24 @@
 const params = new URLSearchParams(window.location.search);
 const id = params.get('id');
+const source = params.get('source');
 
-fetch('prayers.json')
+const jsonFile = source === 'essentials' ? 'essentials.json' : 'prayers.json';
+const backHref = source === 'essentials' ? 'essentials.html' : 'index.html';
+
+document.getElementById('back-link').href = backHref;
+
+fetch(jsonFile)
   .then(response => response.json())
-  .then(prayers => {
-    const prayer = prayers.find(p => p.id === id);
+  .then(items => {
+    const item = items.find(i => i.id === id);
     const titleEl = document.getElementById('prayer-title');
     const textEl = document.getElementById('prayer-text');
     const headerEl = document.getElementById('prayer-header');
 
-    titleEl.textContent = prayer.title;
-    titleEl.style.color = '#ffffff';
-    headerEl.style.backgroundColor = prayer.color;
-    textEl.textContent = prayer.text;
-    document.querySelector('meta[name="theme-color"]').setAttribute('content', prayer.color);
+    titleEl.textContent = item.title;
+    headerEl.style.backgroundColor = item.color;
+    textEl.textContent = item.text;
+    document.querySelector('meta[name="theme-color"]').setAttribute('content', item.color);
   });
 
 window.addEventListener('scroll', () => {

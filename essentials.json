@@ -3,12 +3,6 @@
     "id": "1",
     "title": "Ganesh Puja",
     "color": "#FEA700",
-    "items": [
-      {
-        "id": "1-1",
-        "title": "Samagri List",
-        "text": "Roli\nChawal\nPhool\nDeepak\nAgarbatti"
-      }
-    ]
+    "text": "Roli\nChawal\nPhool\nDeepak\nAgarbatti"
   }
 ]

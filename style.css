@@ -15,7 +15,6 @@ body {
   text-align: center;
 }
 
-/* Page list content */
 .page-content {
   padding: 80px 24px 40px 24px;
 }
@@ -48,7 +47,6 @@ ul li a:hover {
   opacity: 0.7;
 }
 
-/* Back link */
 .back-link {
   position: fixed;
   top: 18px;
@@ -59,7 +57,6 @@ ul li a:hover {
   z-index: 100;
 }
 
-/* Prayer full screen header */
 .prayer-header {
   width: 100vw;
   margin-left: calc(-50vw + 50%);
@@ -82,7 +79,6 @@ ul li a:hover {
   padding: 0 20px;
 }
 
-/* Prayer text body */
 .prayer-body {
   background-color: #ffffff;
   padding: 40px 24px;
@@ -99,7 +95,6 @@ pre.prayer-text {
   color: #000000;
 }
 
-/* Hamburger - top right */
 .hamburger {
   position: fixed;
   top: 18px;
@@ -118,7 +113,6 @@ pre.prayer-text {
   background-color: #000000;
 }
 
-/* Side menu - slides in from right */
 .side-menu {
   position: fixed;
   top: 0;

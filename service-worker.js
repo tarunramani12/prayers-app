@@ -1,18 +1,14 @@
-const CACHE_NAME = 'prayers-cache-v25';
+const CACHE_NAME = 'prayers-cache-v26';
 
 const FILES_TO_CACHE = [
   '/',
   '/index.html',
   '/prayer.html',
   '/essentials.html',
-  '/essentials-items.html',
-  '/essential-detail.html',
   '/style.css',
   '/app.js',
   '/prayer.js',
   '/essentials.js',
-  '/essentials-items.js',
-  '/essential-detail.js',
   '/prayers.json',
   '/essentials.json'
 ];
