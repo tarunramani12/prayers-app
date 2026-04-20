@@ -2,8 +2,9 @@
 <html lang="en">
 <head>
   <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#8b5e3c">
   <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="theme-color" content="#ffffff">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Prayers</title>
@@ -11,11 +12,24 @@
 </head>
 <body>
 
-  <h1></h1>
+  <div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+  </div>
 
-  <ul id="prayer-list"></ul>
+  <nav class="side-menu" id="sideMenu">
+    <a href="index.html">🙏 Prayers</a>
+    <a href="essentials.html">✨ Prayer Essentials</a>
+  </nav>
+
+  <div class="overlay" id="overlay" onclick="toggleMenu()"></div>
+
+  <div class="page-content">
+    <h1>प्रार्थनाएं</h1>
+    <ul id="prayer-list"></ul>
+  </div>
 
   <script src="app.js"></script>
-
 </body>
 </html>

@@ -9,6 +9,7 @@
 body {
   font-family: 'Yatra One', serif;
   color: #000000;
+  background-color: #ffffff;
   max-width: 680px;
   margin: 0 auto;
   padding: 0;
@@ -36,11 +37,14 @@ ul li a {
   font-size: clamp(1.1rem, 4vw, 1.5rem);
   font-family: 'Yatra One', serif;
   text-shadow: 2px 2px 6px rgba(0,0,0,0.2);
-  color: #333333 !important;
 }
 
 ul li a:hover {
   opacity: 0.7;
+}
+
+.page-content {
+  padding: 80px 24px 40px 24px;
 }
 
 .back-link {
@@ -91,17 +95,67 @@ pre.prayer-text {
   z-index: 1;
 }
 
-.separator {
+.hamburger {
+  position: fixed;
+  top: 18px;
+  left: 18px;
+  z-index: 200;
+  cursor: pointer;
   display: flex;
   flex-direction: column;
-  align-items: center;
   gap: 5px;
-  margin-top: 10px;
 }
 
-.separator span {
+.hamburger span {
   display: block;
-  width: 40px;
-  height: 1px;
-  background-color: #ccc;
+  width: 24px;
+  height: 2px;
+  background-color: #000000;
+}
+
+.side-menu {
+  position: fixed;
+  top: 0;
+  left: -260px;
+  width: 260px;
+  height: 100vh;
+  background-color: #ffffff;
+  border-right: 1px solid #eee;
+  z-index: 300;
+  display: flex;
+  flex-direction: column;
+  padding: 80px 24px 24px 24px;
+  gap: 24px;
+  transition: left 0.3s ease;
+}
+
+.side-menu a {
+  text-decoration: none;
+  font-family: 'Yatra One', serif;
+  font-size: 1.1rem;
+  color: #333333;
+  text-align: left;
+}
+
+.side-menu a:hover {
+  opacity: 0.7;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.3);
+  z-index: 250;
+}
+
+.menu-open .side-menu {
+  left: 0;
+}
+
+.menu-open .overlay {
+  display: block;
 }

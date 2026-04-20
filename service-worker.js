@@ -1,13 +1,20 @@
-const CACHE_NAME = 'prayers-cache-v23';
+const CACHE_NAME = 'prayers-cache-v24';
 
 const FILES_TO_CACHE = [
   '/',
   '/index.html',
   '/prayer.html',
+  '/essentials.html',
+  '/essentials-items.html',
+  '/essential-detail.html',
   '/style.css',
   '/app.js',
   '/prayer.js',
-  '/prayers.json'
+  '/essentials.js',
+  '/essentials-items.js',
+  '/essential-detail.js',
+  '/prayers.json',
+  '/essentials.json'
 ];
 
 self.addEventListener('install', event => {
