@@ -1,8 +1,44 @@
 [
   {
     "id": "1",
-    "title": "Ganesh Puja",
-    "color": "#FEA700",
-    "text": "Roli\nChawal\nPhool\nDeepak\nAgarbatti"
+    "title": "Diwali Pooja",
+    "color": "#FD7E21",
+    "requirements": [
+      { "id": "r1", "label": "Soil diyas", "note": "5", "children": [] },
+      { "id": "r2", "label": "Panchamrit", "note": "", "children": [
+        { "id": "r2a", "label": "Milk", "note": "" },
+        { "id": "r2b", "label": "Curd", "note": "" },
+        { "id": "r2c", "label": "Ganga jal", "note": "" },
+        { "id": "r2d", "label": "Ghee", "note": "" },
+        { "id": "r2e", "label": "Honey", "note": "" }
+      ]},
+      { "id": "r3", "label": "Haldi", "note": "", "children": [] },
+      { "id": "r4", "label": "Kumkum", "note": "", "children": [] },
+      { "id": "r5", "label": "Supari", "note": "", "children": [] },
+      { "id": "r6", "label": "Rice", "note": "", "children": [] },
+      { "id": "r7", "label": "Fresh flowers", "note": "", "children": [] },
+      { "id": "r8", "label": "Fresh fruit", "note": "at least 1", "children": [] },
+      { "id": "r9", "label": "Silver coins", "note": "5 or 11", "children": [] },
+      { "id": "r10", "label": "Mustard oil", "note": "", "children": [] }
+    ],
+    "aartis": [
+      { "id": "1", "label": "Ganesh Aarti" },
+      { "id": "3", "label": "Laxmi Aarti" },
+      { "id": "2", "label": "Vishnu Aarti" }
+    ]
+  },
+  {
+    "id": "2",
+    "title": "Karwa Chauth",
+    "color": "#C6095D",
+    "requirements": [],
+    "aartis": []
+  },
+  {
+    "id": "3",
+    "title": "Teej",
+    "color": "#2E7D32",
+    "requirements": [],
+    "aartis": []
   }
 ]

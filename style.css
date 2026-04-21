@@ -23,20 +23,20 @@ ul {
   list-style: none;
 }
 
-ul li {
+.page-content > ul li {
   margin-bottom: 18px;
   padding-bottom: 18px;
   border-bottom: 1px solid #eee;
 }
 
-ul li a {
+.page-content > ul li a {
   text-decoration: none;
   font-family: 'Yatra One', serif;
   font-size: clamp(1.1rem, 4vw, 1.5rem);
   color: #333333;
 }
 
-ul li a:hover {
+.page-content > ul li a:hover {
   opacity: 0.7;
 }
 
@@ -128,4 +128,99 @@ pre.prayer-text {
 
 .menu-open .overlay {
   display: block;
+}
+
+/* Essential detail page */
+.section {
+  margin-bottom: 24px;
+  text-align: left;
+}
+
+.section-toggle {
+  width: 100%;
+  background: none;
+  border: none;
+  border-bottom: 1px solid #eee;
+  padding: 14px 0;
+  font-family: 'Yatra One', serif;
+  font-size: 1.1rem;
+  color: #000000;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+}
+
+.toggle-icon {
+  font-size: 0.8rem;
+  color: #999;
+}
+
+.section-body {
+  padding-top: 12px;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.section-body.collapsed {
+  display: none;
+}
+
+.completed-count {
+  font-size: 0.85rem;
+  color: #999;
+  margin-bottom: 12px;
+  font-family: sans-serif;
+}
+
+.checklist {
+  list-style: none;
+}
+
+.checklist li {
+  border-bottom: none;
+  margin-bottom: 14px;
+  padding-bottom: 0;
+}
+
+.checklist-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  border: 2px solid #ccc;
+  flex-shrink: 0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.checkbox.checked {
+  background-color: #ccc;
+}
+
+.item-label {
+  font-family: 'Yatra One', serif;
+  font-size: clamp(0.9rem, 3vw, 1.1rem);
+  color: #000000;
+}
+
+.aarti-link {
+  text-decoration: none;
+  color: #000000;
+  border-bottom: 1px solid #ccc;
+}
+
+.aarti-link:hover {
+  opacity: 0.7;
+}
+
+.sub-checklist {
+  margin-left: 32px;
+  margin-top: 8px;
 }

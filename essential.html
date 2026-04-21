@@ -24,31 +24,35 @@
 
   <div class="overlay" onclick="toggleMenu()"></div>
 
-  <a class="back-link" href="essentials.html">← Back</a>
+  <a class="back-link" onclick="history.back()" href="#">← Back</a>
 
   <div class="page-content">
     <h1 id="essential-title" class="prayer-title"></h1>
 
+    <!-- Checklist Section -->
     <div class="section">
-      <button class="section-toggle" onclick="toggleSection('requirements')">
-        Requirements <span class="toggle-icon" id="req-icon">▼</span>
-      </button>
-      <div class="section-body" id="requirements">
-        <div id="completed-count" class="completed-count"></div>
-        <ul id="requirements-list" class="checklist"></ul>
+      <div class="section-header" onclick="toggleSection('checklist')">
+        <span>Checklist</span>
+        <span class="chevron" id="chevron-checklist">▾</span>
+      </div>
+      <div class="section-body" id="checklist">
+        <div class="clear-all" onclick="clearAll()">Clear All</div>
+        <ul id="checklist-list" class="checklist"></ul>
       </div>
     </div>
 
+    <!-- Aartis Section -->
     <div class="section">
-      <button class="section-toggle" onclick="toggleSection('aartis')">
-        Aartis <span class="toggle-icon" id="aar-icon">▼</span>
-      </button>
+      <div class="section-header" onclick="toggleSection('aartis')">
+        <span>Aartis</span>
+        <span class="chevron" id="chevron-aartis">▾</span>
+      </div>
       <div class="section-body" id="aartis">
-        <ul id="aartis-list" class="checklist"></ul>
+        <ul id="aartis-list" class="plain-list"></ul>
       </div>
     </div>
   </div>
 
-  <script src="essential-detail.js"></script>
+  <script src="essential.js"></script>
 </body>
 </html>
